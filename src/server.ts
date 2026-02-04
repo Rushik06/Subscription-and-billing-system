@@ -11,9 +11,14 @@ import { env } from './config/env.js';
 //swagger
 import swaggerUi from 'swagger-ui-express';
 import swaggerSpec from './swagger/swagger.js';
+//security middlewares
+import { applySecurityMiddlewares } from './middlewares/security.js';
 
 const app = express();
 const PORT = env.PORT || 3000;
+
+//apply security
+applySecurityMiddlewares(app);
 
 //middlewares
 app.use(express.json());
