@@ -14,6 +14,13 @@ const swaggerOptions: swaggerJsdoc.Options = {
         url: 'http://localhost:3000'
       }
     ],
+      tags: [
+      { name: 'Auth', description: 'Authentication APIs' },
+      { name: 'Users', description: 'User management APIs' },
+      { name: 'Plans', description: 'Subscription plans APIs' },
+      { name: 'Subscriptions', description: 'User subscriptions APIs' },
+      { name: 'Invoices', description: 'Billing & invoice APIs' }
+    ],
     components: {
       securitySchemes: {
         bearerAuth: {
@@ -31,8 +38,8 @@ const swaggerOptions: swaggerJsdoc.Options = {
   },
 
   apis: [
-    './src/routes/*.ts',
-    './src/controller/*.ts'
+    './src/routes/**/*.ts',
+    './src/controller/**/*.ts'
   ]
 };
 
