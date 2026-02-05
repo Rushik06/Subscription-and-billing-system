@@ -21,10 +21,14 @@ async function register(req: Request, res: Response) {
 async function login(req: Request, res: Response) {
   try {
     const { email, password } = req.body;
+    console.log("email",email);
+    console.log("pass",password)
     const tokens = await loginUser(email, password);
+    console.log("token",tokens)
     res.json(tokens);
   } catch (err: any) {
     res.status(401).json({ message: err.message });
+    console.log("error",err);
   }
 }
 

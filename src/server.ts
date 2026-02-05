@@ -9,8 +9,8 @@ import subscriptionRouter from './routes/subscriptions.routes.js';
 //env
 import { env } from './config/env.js';
 //swagger
-//import swaggerUi from 'swagger-ui-express';
-//import swaggerSpec from './swagger/swagger.js';
+import swaggerUi from 'swagger-ui-express';
+import swaggerSpec from './swagger/swagger.js';
 //security middlewares
 //import { applySecurityMiddlewares } from './middlewares/security.js';
 
@@ -24,7 +24,7 @@ const PORT = env.PORT || 3000;
 app.use(express.json());
 
 //swagger docs
-//app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 //routes
 app.use('/auth', authRouter);

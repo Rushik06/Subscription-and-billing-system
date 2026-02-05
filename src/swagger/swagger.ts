@@ -1,4 +1,4 @@
- /*import swaggerJsdoc from 'swagger-jsdoc';
+ import swaggerJsdoc from 'swagger-jsdoc';
 
 const swaggerOptions: swaggerJsdoc.Options = {
   definition: {
@@ -38,4 +38,4 @@ const swaggerOptions: swaggerJsdoc.Options = {
 
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
-export default swaggerSpec;*/
+export default swaggerSpec;
