@@ -24,48 +24,7 @@ with full JWT-based authentication and authorization.
 - Foreign key relationships enforced
 
 ---
-
 ---
-## Project Structure
-
-```text
-subscription-and-billing-system/
-├── src/
-│   ├── controllers/
-│   │   ├── auth.controller.ts
-│   │   ├── users.controller.ts
-│   │   ├── plans.controller.ts
-│   │   ├── subscriptions.controller.ts
-│   │   └── invoices.controller.ts
-│   ├── routes/
-│   │   ├── auth.routes.ts
-│   │   ├── users.routes.ts
-│   │   ├── plans.routes.ts
-│   │   ├── subscriptions.routes.ts
-│   │   └── invoices.routes.ts
-│   ├── services/
-│   │   ├── auth.service.ts
-│   │   ├── user.service.ts
-│   │   ├── plan.service.ts
-│   │   ├── subscription.service.ts
-│   │   └── invoice.service.ts
-│   ├── middlewares/
-│   │   ├── authenticate.ts
-│   │   ├── authorizeRole.ts
-│   │   └── security.ts
-│   ├── config/
-│   │   ├── env.ts
-│   │   └── database.ts
-│   ├── swagger/
-│   │   └── swagger.ts
-│   └── server.ts
-├── .env
-├── .gitignore
-├── package.json
-├── tsconfig.json
-└── README.md
-
-    ---
 
     ## Authentication & Authorization
     - JWT-based authentication
@@ -109,3 +68,43 @@ subscription-and-billing-system/
     ## API Documentation
     Swagger UI is available at:
     http://localhost:3000/docs
+
+    ---
+## Project Structure
+
+ ```text
+subscription-and-billing-system/
+├── src/
+│   ├── controllers/
+│   │   ├── auth.controller.ts
+│   │   ├── users.controller.ts
+│   │   ├── plans.controller.ts
+│   │   ├── subscriptions.controller.ts
+│   │   └── invoices.controller.ts
+│   ├── routes/
+│   │   ├── auth.routes.ts
+│   │   ├── users.routes.ts
+│   │   ├── plans.routes.ts
+│   │   ├── subscriptions.routes.ts
+│   │   └── invoices.routes.ts
+│   ├── services/
+│   │   ├── auth.service.ts
+│   │   ├── user.service.ts
+│   │   ├── plan.service.ts
+│   │   ├── subscription.service.ts
+│   │   └── invoice.service.ts
+│   ├── middlewares/
+│   │   ├── authenticate.ts
+│   │   ├── authorizeRole.ts
+│   │   └── security.ts
+│   ├── config/
+│   │   ├── env.ts
+│   │   └── database.ts
+│   ├── swagger/
+│   │   └── swagger.ts
+│   └── server.ts
+├── .env
+├── .gitignore
+├── package.json
+├── tsconfig.json
+└── README.md
