@@ -1,0 +1,28 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    container_name: subscription-api
+    env_file:
+      - .env
+    expose:
+      - 3000
+    networks:
+      - api-network
+
+  nginx:
+    image: nginx:alpine
+    container_name: subscription-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/sites-available/default:ro
+    depends_on:
+      - api
+    networks:
+      - api-network
+
+networks:
+  api-network:
+    driver: bridge
