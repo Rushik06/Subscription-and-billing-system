@@ -65,47 +65,47 @@ subscription-and-billing-system/
 ├── tsconfig.json
 └── README.md
 
----
+    ---
 
-## Authentication & Authorization
-- JWT-based authentication
-- Access token required for all routes except register & login
-- Refresh token used to generate new access tokens
-- Role-based authorization (USER, ADMIN)
-- Users can access only their own data
-- Admin-only access for creating subscription plans
-- Soft delete implemented for users
+    ## Authentication & Authorization
+    - JWT-based authentication
+    - Access token required for all routes except register & login
+    - Refresh token used to generate new access tokens
+    - Role-based authorization (USER, ADMIN)
+    - Users can access only their own data
+    - Admin-only access for creating subscription plans
+    - Soft delete implemented for users
 
----
+    ---
 
-## API Endpoints
+    ## API Endpoints
 
-Auth  
-- POST /auth/register  
-- POST /auth/login  
-- POST /auth/refresh-token  
-- POST /auth/logout  
+    Auth  
+    - POST /auth/register  
+    - POST /auth/login  
+    - POST /auth/refresh-token  
+    - POST /auth/logout  
 
-Users  
-- GET /users/me  
-- PATCH /users/me  
-- PATCH /users/me/password  
-- DELETE /users/me  
+    Users  
+    - GET /users/me  
+    - PATCH /users/me  
+    - PATCH /users/me/password  
+    - DELETE /users/me  
 
-Plans  
-- POST /api/plans (Admin only)  
-- GET /api/plans  
+    Plans  
+    - POST /api/plans (Admin only)  
+    - GET /api/plans  
 
-Subscriptions  
-- POST /api/subscriptions  
-- GET /api/subscriptions/{id}  
-- DELETE /api/subscriptions/{id}  
+    Subscriptions  
+    - POST /api/subscriptions  
+    - GET /api/subscriptions/{id}  
+    - DELETE /api/subscriptions/{id}  
 
-Invoices  
-- GET /api/invoices/{invoiceId}  
+    Invoices  
+    - GET /api/invoices/{invoiceId}  
 
----
+    ---
 
-## API Documentation
-Swagger UI is available at:
-http://localhost:3000/docs
+    ## API Documentation
+    Swagger UI is available at:
+    http://localhost:3000/docs
