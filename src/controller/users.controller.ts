@@ -56,6 +56,7 @@ function deleteMe(req: AuthRequest, res: Response) {
 }
 
 export {
+  
   getMe,
   updateMe,
   updatePassword,
