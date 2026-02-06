@@ -7,7 +7,7 @@ import db from '../database/db.js';
 ) =>
   db.prepare(
     `INSERT INTO subscriptions
-     VALUES (?, ?, ?, "ACTIVE", ?, NULL, NULL, CURRENT_TIMESTAMP)`
+     VALUES (?, ?, ?, 'ACTIVE', ?, NULL, NULL, CURRENT_TIMESTAMP)`
   ).run(id, userId, planId, new Date().toISOString());
 
 const getSubscription = (id: string, userId: string) =>
@@ -18,7 +18,7 @@ const getSubscription = (id: string, userId: string) =>
  const cancelSubscription = (id: string, userId: string) =>
   db.prepare(
     `UPDATE subscriptions
-     SET status="CANCELLED",
+     SET status='CANCELLED',
          cancelled_at=CURRENT_TIMESTAMP,
          end_date=CURRENT_TIMESTAMP
      WHERE id=? AND user_id=?`
