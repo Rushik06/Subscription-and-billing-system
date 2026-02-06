@@ -66,6 +66,8 @@ subscription-and-billing-system/
 └── README.md
 
 ```
+ ## DataBase Schema
+  ![alt text](image.png)
 
   ---
   ---
@@ -114,4 +116,4 @@ subscription-and-billing-system/
     http://localhost:3000/docs
 
     ---
-    ![alt text](image.png)
+    
