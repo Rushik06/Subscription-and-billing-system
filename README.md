@@ -66,8 +66,8 @@ subscription-and-billing-system/
 └── README.md
 
 ```
-   ## Data Schema Design
-      <img width="833" height="652" alt="image" src="https://github.com/user-attachments/assets/18dffd80-dbec-4e0b-8767-97ca491c0f97" />
+ ## DataBase Schema
+  ![alt text](image.png)
 
   ---
   ---
@@ -114,5 +114,6 @@ subscription-and-billing-system/
    ## API Documentation
     Swagger UI is available at:
     http://localhost:3000/docs
+
     ---
-     
+    
