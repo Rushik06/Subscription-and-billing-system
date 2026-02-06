@@ -1,28 +1,24 @@
+version: "3.9"
+
 services:
   api:
     build:
       context: .
-      dockerfile: Dockerfile.prod
-    container_name: subscription-api
+      dockerfile: Dockerfile
+    container_name: api
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
     env_file:
-      - .env
-    expose:
-      - 3000
-    networks:
-      - api-network
+      - .env   # <-- Add this line to inject environment variables
 
   nginx:
     image: nginx:alpine
-    container_name: subscription-nginx
+    container_name: nginx
+    restart: unless-stopped
     ports:
       - "80:80"
     volumes:
-      - ./nginx/nginx.conf:/etc/nginx/sites-available/default:ro
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
     depends_on:
       - api
-    networks:
-      - api-network
-
-networks:
-  api-network:
-    driver: bridge

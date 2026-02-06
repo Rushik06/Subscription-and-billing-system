@@ -34,6 +34,6 @@ app.use('/api/invoices', invoiceRouter);
 app.use('/api/subscriptions', subscriptionRouter);
 
 //start server
-app.listen(PORT, () => {
+app.listen(PORT,"0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
 });

@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon --watch src --exec node --loader ts-node/esm src/server.ts",
-    "start": "abc",
-    "build":"abc",
+     "build": "tsc",
+    "start": "node dist/server.js",
     "lint": "eslint .",
     "format": "prettier --write \"**/*.{ts,js,json,css,md}\"",
     "prepare": "husky"
