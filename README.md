@@ -70,7 +70,7 @@ subscription-and-billing-system/
   ---
   ---
 
-    ## Authentication & Authorization
+  ## Authentication and Authorization
     - JWT-based authentication
     - Access token required for all routes except register & login
     - Refresh token used to generate new access tokens
@@ -109,6 +109,6 @@ subscription-and-billing-system/
 
     ---
 
-    ## API Documentation
+   ## API Documentation
     Swagger UI is available at:
     http://localhost:3000/docs
