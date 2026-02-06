@@ -7,7 +7,7 @@ const swaggerOptions: swaggerJsdoc.Options = {
       title: 'Subscription & Billing System API',
       version: '1.0.0',
       description:
-        'API documentation for Assignment 5 - Subscription & Billing System'
+        'API documentation for Subscription & Billing System'
     },
     servers: [
       {
