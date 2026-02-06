@@ -112,3 +112,6 @@ subscription-and-billing-system/
    ## API Documentation
     Swagger UI is available at:
     http://localhost:3000/docs
+
+    ---
+    ![alt text](image.png)
